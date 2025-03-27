@@ -32,7 +32,7 @@ route:
 receivers:
   - name: 'slack-notifications'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/T08KF6DNH7V/B08KGEH0LSW/*************'
         channel: '#noub'
         send_resolved: true
         title: '{{ .CommonAnnotations.summary }}'
