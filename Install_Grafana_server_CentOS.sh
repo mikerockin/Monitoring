@@ -4,9 +4,11 @@
 # Include Prometheus DataSource Configuration
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
+
 GRAFANA_VERSION="11.6.4"
 PROMETHEUS_URL="http://192.168.56.15:9090"
 
+sudo dnf install -y wget
 wget -q -O gpg.key https://rpm.grafana.com/gpg.key
 sudo rpm --import gpg.key
 
@@ -22,7 +24,7 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 EOF
 
-sudo yum install -y https://dl.grafana.com/enterprise/release/grafana-enterprise-11.6.0-1.x86_64.rpm
+sudo yum install -y https://dl.grafana.com/oss/release/grafana-11.6.0-1.x86_64.rpm
 echo "export PATH=/usr/share/grafana/bin:$PATH" >> /etc/profile
 
 cat <<EOF> /etc/grafana/provisioning/datasources/prometheus.yaml
@@ -35,6 +37,6 @@ datasources:
 EOF
 
 systemctl daemon-reload
-systemctl enable grafana-server
 systemctl start grafana-server
+systemctl enable grafana-server
 systemctl status grafana-server
