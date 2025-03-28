@@ -21,7 +21,7 @@ mkdir -p /etc/alertmanager/data
 useradd -rs /bin/false alertmanager
 chown alertmanager:alertmanager /usr/bin/alertmanager
 
-cat <<EOF> /etc/alertmanager/alertmanager.yml
+cat <<EOF>> /etc/alertmanager/alertmanager.yml
 global:
 
 route:
