@@ -15,6 +15,7 @@ cd alertmanager-$ALERT_MANAGER_VERSION.linux-amd64
 mv alertmanager /usr/bin/
 chcon -t bin_t /usr/bin/alertmanager
 rm -rf /tmp/alertmanager*
+mkdir -p /etc/alertmanager
 
 useradd -rs /bin/false alertmanager
 chown alertmanager:alertmanager /usr/bin/alertmanager
@@ -49,7 +50,7 @@ User=alertmanager
 Group=alertmanager
 Type=simple
 Restart=on-failure
-ExecStart=/usr/local/bin/alertmanager --config.file=/etc/alertmanager/alertmanager.yml --storage.path=/var/lib/alertmanager
+ExecStart=/usr/bin/alertmanager --config.file=/etc/alertmanager/alertmanager.yml --storage.path=/etc/alertmanager/data
 
 [Install]
 WantedBy=multi-user.target
