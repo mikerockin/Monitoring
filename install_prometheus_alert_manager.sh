@@ -1,6 +1,6 @@
 #!/bin/bash
 #--------------------------------------------------------------------
-# Script to Install Prometheus Mysqld_Exporter on CentOS Stream  9
+# Script to Install Prometheus ALert Manager on CentOS Stream  9
 # Tested on  CentOS Stream Vagrant 9
 #--------------------------------------------------------------------
 # https://github.com/prometheus/alertmanager/releases
@@ -10,7 +10,7 @@ ALERT_MANAGER_VERSION="0.28.1"
 cd /tmp
 curl -L https://github.com/prometheus/alertmanager/releases/download/v$ALERT_MANAGER_VERSION/alertmanager-$ALERT_MANAGER_VERSION.linux-amd64.tar.gz -O
 tar xvfz alertmanager-$ALERT_MANAGER_VERSION.linux-amd64.tar.gz
-cd alertmanager-$MYSQLD_EXPORTER_VERSION.linux-amd64
+cd alertmanager-$ALERT_MANAGER_VERSION.linux-amd64
 
 mv alertmanager /usr/bin/
 chcon -t bin_t /usr/bin/alertmanager
