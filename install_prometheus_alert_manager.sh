@@ -16,6 +16,7 @@ mv alertmanager /usr/bin/
 chcon -t bin_t /usr/bin/alertmanager
 rm -rf /tmp/alertmanager*
 mkdir -p /etc/alertmanager
+mkdir -p /etc/alertmanager/data
 
 useradd -rs /bin/false alertmanager
 chown alertmanager:alertmanager /usr/bin/alertmanager
