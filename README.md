@@ -1,4 +1,4 @@
-# Prometheus and Grafana
+# Monitoring
 Scripts for Prometheus Monitoring System
 
 ### Includes  scripts:
