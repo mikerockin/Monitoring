@@ -1,5 +1,5 @@
-# Monitoring
-Scripts for Prometheus Monitoring System
+# Prometheus
+Scripts for Monitoring System
 
 ### Includes  scripts:
 
