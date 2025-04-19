@@ -1,7 +1,7 @@
 #!/bin/bash
 #--------------------------------------------------------------------
 # Script to Install Grafana Server on CentOS Stream  9
-# Include Prometheus DataSource Configuration
+# Includes Prometheus DataSource Configuration
 #--------------------------------------------------------------------
 # https://grafana.com/grafana/download
 
