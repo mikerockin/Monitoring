@@ -1,5 +1,5 @@
 # Prometheus + Grafana + Alert Manager + mySQL DB monitoring
-Scripts for monitoring system
+Scripts for monitoring
 
 ### Includes  scripts:
 
